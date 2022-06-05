@@ -1,0 +1,29 @@
+h2 {
+    font-size: 1.1em;
+}
+
+.voteit {
+    .voteit-stats {
+        .fa-angle-up {
+            color: green;
+        }
+        .votes-up {
+            color: green;
+        }
+        .fa-angle-down {
+            color: red;
+        }
+    }
+    .voteit-info {
+        .voteit-url {
+                    text-decoration: none;
+        }
+        .author {
+            color: red;
+            margin-right: 10px;
+        }
+        .tag {
+            color: green;
+        }
+    }
+}
