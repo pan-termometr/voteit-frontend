@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Voteit } from 'src/app/model/voteit';
 
 @Component({
-  selector: 'app-voteit',
-  templateUrl: './voteit.component.html',
-  styleUrls: ['./voteit.component.scss']
+  selector: 'app-voteit-preview',
+  templateUrl: './voteit-preview.component.html',
+  styleUrls: ['./voteit-preview.component.scss']
 })
-export class VoteitComponent implements OnInit {
+export class VoteitPreviewComponent implements OnInit {
 
   @Input() voteit! : Voteit;
 

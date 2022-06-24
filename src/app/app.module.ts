@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/commons/navbar/navbar.component';
 import { VoteitsComponent } from './components/main/voteits/voteits.component';
-import { VoteitComponent } from './components/main/voteits/voteit/voteit.component';
+import { VoteitPreviewComponent } from './components/main/voteits/voteit-preview/voteit-preview.component';
+import { VoteitComponent } from './components/main/voteit/voteit.component';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
@@ -13,10 +16,13 @@ import { VoteitComponent } from './components/main/voteits/voteit/voteit.compone
     AppComponent,
     NavbarComponent,
     VoteitsComponent,
-    VoteitComponent
+    VoteitPreviewComponent,
+    VoteitComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
   ],
   providers: [],

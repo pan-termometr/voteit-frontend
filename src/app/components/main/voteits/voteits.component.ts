@@ -23,7 +23,7 @@ export class VoteitsComponent implements OnInit {
       user : "termometr"
     },
     {
-      id: 1,
+      id: 2,
       tags: ["politics", "world"],
       title: "Raport o stanie świata",
       description: "W formie podcastu albo programów na żywo z różnych miejsc na ziemi. Formaty Raportu. Raport o stanie świata to nie pojedyncza audycja, tylko cała rodzina",
