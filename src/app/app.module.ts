@@ -9,6 +9,7 @@ import { VoteitsComponent } from './components/main/voteits/voteits.component';
 import { VoteitPreviewComponent } from './components/main/voteits/voteit-preview/voteit-preview.component';
 import { VoteitComponent } from './components/main/voteit/voteit.component';
 import { MainComponent } from './components/main/main.component';
+import { UrlTitlePipe } from './pipe/url-title.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MainComponent } from './components/main/main.component';
     VoteitsComponent,
     VoteitPreviewComponent,
     VoteitComponent,
-    MainComponent
+    MainComponent,
+    UrlTitlePipe
   ],
   imports: [
     BrowserModule,

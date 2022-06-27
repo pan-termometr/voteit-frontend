@@ -20,25 +20,19 @@
     <div class="p-2 col-8 voteit-info">
         <div>
             <h2 class="text-primary mt-2 mb-1">
-                <a routerLink="../{{voteit.id}}/{{voteit.title}}" class="voteit-url">
-                    {{voteit.title}}
-                </a>
+                <a class="voteit-url" routerLink="../{{voteit.id}}/{{voteit.title | lowercase | urlTitle}}">{{voteit.title}}</a>
             </h2>
         </div>
         <div>
             <div class="d-flex voteit-details align-items-center">
                     <small class="author mr-5">
-                        <b>
-                            @{{voteit.user}}
-                        </b>
+                        <b>@{{voteit.user}}</b>
                     </small>
                     <div *ngFor="let tag of voteit.tags">
                         <small class="p-2 tag">#{{tag}}</small>
                     </div>
             </div>
-            <p>
-                {{voteit.description}}
-            </p>
+            <p class="voteit-description">{{voteit.description}}</p>
         </div>
     </div>
 </div>
