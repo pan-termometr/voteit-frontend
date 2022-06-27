@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UrlTitlePipe } from 'src/app/pipe/url-title.pipe';
 import { Voteit } from 'src/app/model/voteit';
 import { VoteitPreviewComponent } from './voteit-preview.component';
-import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LowerCasePipe } from '@angular/common';
 
@@ -35,7 +34,7 @@ describe('VoteitPreviewComponent', () => {
       votesDown: 0,
       isForAdult: false,
       creationDate: "2022-06-05 13:00:00",
-      user: "termometr"
+      author: "termometr"
     }
     component.voteit = voteit;
     urlTitlePipe = new UrlTitlePipe;
@@ -67,7 +66,7 @@ describe('VoteitPreviewComponent', () => {
     expect(imageAlt).toEqual(voteit.title)
     expect(title).toEqual(voteit.title)
     expect(url).toEqual('/' + voteit.id + '/' + lowerCasePipe.transform(urlTitlePipe.transform(voteit.title)))
-    expect(author).toEqual('@' + voteit.user)
+    expect(author).toEqual('@' + voteit.author)
     expect(tags[0].textContent).toEqual('#' + voteit.tags[0])
     expect(tags[1].textContent).toEqual('#' + voteit.tags[1])
     expect(description).toEqual(voteit.description)

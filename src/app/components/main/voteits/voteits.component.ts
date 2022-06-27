@@ -20,7 +20,7 @@ export class VoteitsComponent implements OnInit {
       votesDown : 0,
       isForAdult : false,
       creationDate : "2022-06-05 13:00:00",
-      user : "termometr"
+      author : "termometr"
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ export class VoteitsComponent implements OnInit {
       votesDown: 13,
       isForAdult: false,
       creationDate: "2022-06-05 15:00:00",
-      user: "termometr"
+      author: "termometr"
     }
   ]
 

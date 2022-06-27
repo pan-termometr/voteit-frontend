@@ -1,6 +1,3 @@
-import { Tag } from "./tag";
-import { User } from "./user";
-
 export interface Voteit {
 
     id: number,
@@ -13,5 +10,5 @@ export interface Voteit {
     votesDown: number,
     isForAdult: boolean,
     creationDate: string,
-    user: string
+    author: string
 }
