@@ -1,14 +1,17 @@
+import { Tag } from "./tag";
+import { User } from "./user";
+
 export interface Voteit {
 
     id: number,
-    tags: string[],
+    tags: Tag[],
     title: string,
     description: string,
     url: string,
-    picture: string,
+    thumbnail: string,
     votesUp: number,
     votesDown: number,
     isForAdult: boolean,
     creationDate: string,
-    author: string
+    author: User
 }

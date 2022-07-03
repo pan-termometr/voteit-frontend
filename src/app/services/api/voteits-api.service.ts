@@ -10,7 +10,11 @@ export class VoteitsApiService {
 
   constructor(readonly httpClient: HttpClient) { }
 
-  getAllVoteits() {
+  getAll() {
     return this.httpClient.get<Voteit[]>(`${this.voteitsApiUrl}`);
+  }
+
+  getById(id: string) {
+    return this.httpClient.get<Voteit>(`${this.voteitsApiUrl}/${id}`);
   }
 }

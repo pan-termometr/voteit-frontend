@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Voteit } from 'src/app/model/voteit';
 
 @Component({
   selector: 'app-voteit',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoteitComponent implements OnInit {
 
-  constructor() { }
+  voteit?: Voteit;
+
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.data.subscribe(({ voteit }) => {
+      this.voteit = voteit;
+    })
   }
 
 }

@@ -29,7 +29,7 @@ describe('VoteitPreviewComponent', () => {
       title: "Autostopem Dookoła Świata",
       description: "Autostopem Dookoła Świata, czyli pierwsza w Polsce podróż dookoła świata autostopem i jachtostopem bez płacenia za transport (i noclegi)",
       url: "https://autostopemdookolaswiata.pl",
-      picture: "https://autostopemdookolaswiata.pl/wp-content/uploads/logo.jpg",
+      thumbnail: "https://autostopemdookolaswiata.pl/wp-content/uploads/logo.jpg",
       votesUp: 1000,
       votesDown: 0,
       isForAdult: false,
@@ -62,7 +62,7 @@ describe('VoteitPreviewComponent', () => {
     const description = document.querySelector('.voteit-description')?.textContent
 
     expect(votesUp).toEqual(String(voteit.votesUp));
-    expect(imageSrc).toEqual(voteit.picture);
+    expect(imageSrc).toEqual(voteit.thumbnail);
     expect(imageAlt).toEqual(voteit.title)
     expect(title).toEqual(voteit.title)
     expect(url).toEqual('/' + voteit.id + '/' + lowerCasePipe.transform(urlTitlePipe.transform(voteit.title)))
