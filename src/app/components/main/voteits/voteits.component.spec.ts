@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { UrlTitlePipe } from 'src/app/pipe/url-title.pipe';
-import { NavbarComponent } from '../../commons/navbar/navbar.component';
 import { VoteitPreviewComponent } from './voteit-preview/voteit-preview.component';
 
 import { VoteitsComponent } from './voteits.component';

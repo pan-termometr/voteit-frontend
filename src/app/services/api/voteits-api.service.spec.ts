@@ -16,8 +16,6 @@ describe('VoteitsApiService', () => {
     });
 
     service = TestBed.inject(VoteitsApiService);
-    httpMock = TestBed.inject(HttpTestingController);
-    httpClient = TestBed.inject(HttpClient);
   });
 
   it('should be created', () => {

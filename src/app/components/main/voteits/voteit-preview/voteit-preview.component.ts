@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Voteit } from 'src/app/model/voteit';
 
 @Component({
@@ -6,13 +6,8 @@ import { Voteit } from 'src/app/model/voteit';
   templateUrl: './voteit-preview.component.html',
   styleUrls: ['./voteit-preview.component.scss']
 })
-export class VoteitPreviewComponent implements OnInit {
+export class VoteitPreviewComponent {
 
   @Input() voteit! : Voteit;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
