@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
-import {
-  Router, Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Resolve } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Voteit } from 'src/app/model/voteit';
 import { VoteitsApiService } from 'src/app/services/api/voteits-api.service';
 
@@ -17,7 +13,7 @@ export class VoteitsResolver implements Resolve<Voteit[]> {
     private voteitsApiService: VoteitsApiService
   ) { }
   
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Voteit[]> {
+  resolve(): Observable<Voteit[]> {
     return this.voteitsApiService.getAll();
   }
 }

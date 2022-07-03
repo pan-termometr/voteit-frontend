@@ -2,19 +2,19 @@
     <div class="p-2 col-1 voteit-stats d-flex flex-column justify-content-center align-items-center">
         <div>
             <a class="btn">
-            <i class="fa-solid fa-angle-up fa-3x"></i>
+            <em class="fa-solid fa-angle-up fa-3x"></em>
             </a>
         </div>
         <div>
-            <b class="votes-up">{{voteit.votesUp}}</b>
+            <strong class="votes-up">{{voteit.votesUp}}</strong>
         </div>
         <div>
             <a class="btn">
-            <i class="fa-solid fa-angle-down fa-3x"></i>
+            <strong class="fa-solid fa-angle-down fa-3x"></strong>
             </a>
         </div>
     </div>
-    <div class="col-2 voteit-picture d-flex align-items-center">
+    <div class="col-2 voteit-thumbnail d-flex align-items-center">
         <img src="assets/voteit-thumbnail/{{voteit.thumbnail}}" alt="{{voteit.title}}" width="100%" height="auto"/>
     </div>
     <div class="p-2 col-8 voteit-info">
@@ -26,10 +26,10 @@
         <div>
             <div class="d-flex voteit-details align-items-center">
                     <small class="author mr-5">
-                        <b>@{{voteit.author.username}}</b>
+                        <a class="author-url" routerLink="../users/{{voteit.author}}"><strong>@{{voteit.author}}</strong></a>
                     </small>
                     <div *ngFor="let tag of voteit.tags">
-                        <small class="p-2 tag">#{{tag.name}}</small>
+                        <small class="p-2 tag">#{{tag}}</small>
                     </div>
             </div>
             <p class="voteit-description">{{voteit.description}}</p>

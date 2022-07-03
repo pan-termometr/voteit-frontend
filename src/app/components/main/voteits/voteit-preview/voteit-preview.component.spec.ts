@@ -39,7 +39,6 @@ describe('VoteitPreviewComponent', () => {
     component.voteit = voteit;
     urlTitlePipe = new UrlTitlePipe;
     lowerCasePipe = new LowerCasePipe;
-    fixture.detectChanges;
   });
 
   it('should create', () => {
@@ -47,14 +46,12 @@ describe('VoteitPreviewComponent', () => {
   });
 
   it('should display voteit', () => {
-    // given
     // when
     fixture.detectChanges();
-
     // then
     const votesUp = document.querySelector('.votes-up')?.textContent
-    const imageSrc = document.querySelector('.voteit-picture > img')?.getAttribute('src')
-    const imageAlt = document.querySelector('.voteit-picture > img')?.getAttribute('alt')
+    const thumbnailSrc = document.querySelector('.voteit-thumbnail > img')?.getAttribute('src')
+    const thumbnailAlt = document.querySelector('.voteit-thumbnail > img')?.getAttribute('alt')
     const title = document.querySelector('.voteit-url')?.textContent
     const url = document.querySelector('.voteit-url')?.getAttribute('href')
     const author = document.querySelector('.author')?.textContent
@@ -62,8 +59,8 @@ describe('VoteitPreviewComponent', () => {
     const description = document.querySelector('.voteit-description')?.textContent
 
     expect(votesUp).toEqual(String(voteit.votesUp));
-    expect(imageSrc).toEqual(voteit.thumbnail);
-    expect(imageAlt).toEqual(voteit.title)
+    expect(thumbnailSrc).toEqual('assets/voteit-thumbnail/' + voteit.thumbnail);
+    expect(thumbnailAlt).toEqual(voteit.title)
     expect(title).toEqual(voteit.title)
     expect(url).toEqual('/' + voteit.id + '/' + lowerCasePipe.transform(urlTitlePipe.transform(voteit.title)))
     expect(author).toEqual('@' + voteit.author)

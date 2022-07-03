@@ -10,6 +10,9 @@ import { VoteitPreviewComponent } from './components/main/voteits/voteit-preview
 import { VoteitComponent } from './components/main/voteit/voteit.component';
 import { MainComponent } from './components/main/main.component';
 import { UrlTitlePipe } from './pipe/url-title.pipe';
+import { VoteitDetailsComponent } from './components/main/voteit/voteit-details/voteit-details.component';
+import { VoteitRelatedComponent } from './components/main/voteit/voteit-related/voteit-related.component';
+import { VoteitCommentsComponent } from './components/main/voteit/voteit-comments/voteit-comments.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { UrlTitlePipe } from './pipe/url-title.pipe';
     VoteitPreviewComponent,
     VoteitComponent,
     MainComponent,
-    UrlTitlePipe
+    UrlTitlePipe,
+    VoteitDetailsComponent,
+    VoteitRelatedComponent,
+    VoteitCommentsComponent
   ],
   imports: [
     BrowserModule,
